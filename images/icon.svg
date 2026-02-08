@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1d23"/>
+      <stop offset="100%" style="stop-color:#12141a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7eb8da"/>
+      <stop offset="100%" style="stop-color:#8cc4b8"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="60" fill="url(#bg)" stroke="#2a2f3a" stroke-width="2"/>
+  
+  <!-- Letter M stylized -->
+  <path d="M 32 88 L 32 48 L 48 68 L 64 48 L 64 88" 
+        fill="none" 
+        stroke="url(#accent)" 
+        stroke-width="6" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+  
+  <path d="M 64 88 L 64 48 L 80 68 L 96 48 L 96 88" 
+        fill="none" 
+        stroke="url(#accent)" 
+        stroke-width="6" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+  
+  <!-- Subtle decorative dots representing code -->
+  <circle cx="28" cy="36" r="3" fill="#6b7280" opacity="0.5"/>
+  <circle cx="40" cy="32" r="2" fill="#8cc4b8" opacity="0.6"/>
+  <circle cx="88" cy="36" r="3" fill="#6b7280" opacity="0.5"/>
+  <circle cx="100" cy="32" r="2" fill="#c4a8b8" opacity="0.6"/>
+  
+  <!-- Bottom accent line -->
+  <line x1="40" y1="100" x2="88" y2="100" 
+        stroke="#7eb8da" 
+        stroke-width="3" 
+        stroke-linecap="round"
+        opacity="0.8"/>
+</svg>

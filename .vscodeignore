@@ -1,0 +1,28 @@
+# Development files
+.vscode/**
+.git/**
+.github/**
+node_modules/**
+scripts/**
+
+# Source files (if using build step)
+src/**
+
+# Config files
+.gitignore
+.eslintrc.json
+tsconfig.json
+*.log
+
+# Documentation (keep README)
+CONTRIBUTING.md
+docs/**
+
+# Test files
+test/**
+**/*.test.js
+
+# Misc
+.DS_Store
+Thumbs.db
+*.vsix

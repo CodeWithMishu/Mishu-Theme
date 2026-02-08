@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sample HTML file for theme preview" />
+    <title>Mishu Theme - HTML Sample</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <style>
+      /* Embedded CSS for demonstration */
+      :root {
+        --color-primary: #7eb8da;
+        --color-secondary: #8cc4b8;
+        --color-background: #1a1d23;
+        --color-text: #c5c8d4;
+        --spacing-unit: 8px;
+        --border-radius: 4px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        background-color: var(--color-background);
+        color: var(--color-text);
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: calc(var(--spacing-unit) * 4);
+      }
+
+      /* Component styles */
+      .card {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: var(--border-radius);
+        padding: calc(var(--spacing-unit) * 3);
+        margin-bottom: calc(var(--spacing-unit) * 2);
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      }
+
+      .card__title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--color-primary);
+        margin-bottom: var(--spacing-unit);
+      }
+
+      .card__content {
+        opacity: 0.9;
+      }
+
+      /* Button styles */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--spacing-unit);
+        padding: calc(var(--spacing-unit) * 1.5) calc(var(--spacing-unit) * 3);
+        border: none;
+        border-radius: var(--border-radius);
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .btn--primary {
+        background: var(--color-primary);
+        color: var(--color-background);
+      }
+
+      .btn--primary:hover {
+        background: #6aa8ca;
+      }
+
+      .btn--secondary {
+        background: transparent;
+        border: 1px solid var(--color-secondary);
+        color: var(--color-secondary);
+      }
+
+      /* Grid layout */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: calc(var(--spacing-unit) * 3);
+      }
+
+      /* Media query */
+      @media (max-width: 768px) {
+        .container {
+          padding: calc(var(--spacing-unit) * 2);
+        }
+
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* Animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-in {
+        animation: fadeIn 0.3s ease forwards;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header" role="banner">
+      <nav class="nav container" aria-label="Main navigation">
+        <a href="/" class="nav__logo">
+          <img
+            src="/images/logo.svg"
+            alt="Mishu Theme Logo"
+            width="32"
+            height="32"
+          />
+          <span>Mishu Theme</span>
+        </a>
+
+        <ul class="nav__links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#themes">Themes</a></li>
+          <li><a href="#docs">Documentation</a></li>
+          <li>
+            <a
+              href="https://github.com/codewithmishu/mishu-theme"
+              target="_blank"
+              rel="noopener"
+              >GitHub</a
+            >
+          </li>
+        </ul>
+
+        <button class="btn btn--primary" type="button" id="installBtn">
+          Install Theme
+        </button>
+      </nav>
+    </header>
+
+    <!-- Main content -->
+    <main id="main" role="main">
+      <section class="hero container">
+        <h1 class="hero__title">Code in Comfort</h1>
+        <p class="hero__subtitle">
+          A calm, low-contrast dark theme designed for eye comfort during long
+          coding sessions.
+        </p>
+
+        <div class="hero__actions">
+          <button class="btn btn--primary" type="button">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path d="M10 0L0 10h5v10h10V10h5L10 0z" />
+            </svg>
+            Download for VS Code
+          </button>
+          <button class="btn btn--secondary" type="button">
+            View on GitHub
+          </button>
+        </div>
+      </section>
+
+      <section id="features" class="features container">
+        <h2>Features</h2>
+
+        <div class="grid">
+          <article class="card animate-in">
+            <h3 class="card__title">👁️ Eye Comfort First</h3>
+            <p class="card__content">
+              Low contrast design reduces eye strain during extended coding
+              sessions. Warm, muted colors that don't fatigue your eyes.
+            </p>
+          </article>
+
+          <article class="card animate-in" style="animation-delay: 0.1s">
+            <h3 class="card__title">🎨 Semantic Highlighting</h3>
+            <p class="card__content">
+              Colors assigned based on code importance, not just token type.
+              Functions stand out, punctuation fades back.
+            </p>
+          </article>
+
+          <article class="card animate-in" style="animation-delay: 0.2s">
+            <h3 class="card__title">🌙 Three Variants</h3>
+            <p class="card__content">
+              Choose from Dark, Dark Soft, or Midnight depending on your
+              environment and preferences.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Form example -->
+      <section class="contact container">
+        <h2>Contact Us</h2>
+
+        <form id="contactForm" action="/api/contact" method="POST" novalidate>
+          <div class="form-group">
+            <label for="name">Name <span aria-hidden="true">*</span></label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              minlength="2"
+              maxlength="100"
+              placeholder="Your name"
+              autocomplete="name"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email <span aria-hidden="true">*</span></label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="you@example.com"
+              autocomplete="email"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="How can we help?"
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>
+              <input type="checkbox" name="subscribe" value="yes" />
+              Subscribe to updates
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn--primary">Send Message</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <p>&copy; 2026 CodeWithMishu. Released under the MIT License.</p>
+        <nav aria-label="Footer navigation">
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+        </nav>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module">
+      // ES Module syntax
+      import { initAnalytics } from "./analytics.js";
+
+      // DOM ready
+      document.addEventListener("DOMContentLoaded", () => {
+        initAnalytics();
+
+        // Form handling
+        const form = document.getElementById("contactForm");
+        form?.addEventListener("submit", async (event) => {
+          event.preventDefault();
+
+          const formData = new FormData(form);
+          const data = Object.fromEntries(formData);
+
+          try {
+            const response = await fetch(form.action, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
+              alert("Message sent successfully!");
+              form.reset();
+            }
+          } catch (error) {
+            console.error("Form submission failed:", error);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

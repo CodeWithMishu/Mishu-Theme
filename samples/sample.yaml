@@ -1,0 +1,178 @@
+# Sample YAML configuration file for theme preview
+# Demonstrates YAML syntax highlighting
+
+name: mishu-theme-config
+version: "1.0.0"
+description: >
+  A calm, low-contrast dark theme designed for 
+  eye comfort during long coding sessions.
+
+# Theme configuration
+theme:
+  variant: dark
+  contrast: low
+  semantic_highlighting: true
+
+# Color palette
+colors:
+  primary: &primary "#7eb8da"
+  secondary: &secondary "#8cc4b8"
+  accent: "#c4a8b8"
+
+  background:
+    editor: "#1a1d23"
+    sidebar: "#16181e"
+    panel: "#12141a"
+
+  foreground:
+    primary: "#c5c8d4"
+    secondary: "#8b8f9c"
+    muted: "#6b7280"
+
+# Syntax highlighting rules
+syntax:
+  functions:
+    color: *primary
+    font_style: normal
+  classes:
+    color: *secondary
+    font_style: normal
+  keywords:
+    color: "#c4a8b8"
+    font_style: normal
+  strings:
+    color: "#a8c4a0"
+    font_style: normal
+  numbers:
+    color: "#d4a88c"
+    font_style: normal
+  comments:
+    color: "#6b7280"
+    font_style: italic
+
+# Supported languages
+languages:
+  - javascript
+  - typescript
+  - python
+  - html
+  - css
+  - json
+  - yaml
+  - markdown
+  - rust
+  - go
+  - c
+  - cpp
+  - java
+  - ruby
+  - php
+
+# Features list
+features:
+  - Eye comfort optimized
+  - Semantic highlighting
+  - Low contrast design
+  - Consistent UI theming
+  - Three theme variants
+
+# Metadata
+metadata:
+  author: CodeWithMishu
+  license: MIT
+  repository: https://github.com/codewithmishu/mishu-theme
+  created_at: 2026-02-08
+  tags:
+    - theme
+    - dark
+    - low-contrast
+    - eye-comfort
+    - vscode
+
+# Environment-specific settings
+environments:
+  development:
+    debug: true
+    hot_reload: true
+
+  production:
+    debug: false
+    minify: true
+
+  testing:
+    mock_data: true
+    verbose: true
+
+# Build configuration
+build:
+  input: ./themes
+  output: ./dist
+
+  steps:
+    - name: validate
+      command: npm run lint
+
+    - name: compile
+      command: npm run build
+
+    - name: package
+      command: vsce package
+
+# CI/CD Pipeline (GitHub Actions style)
+ci:
+  name: Build and Publish
+
+  on:
+    push:
+      branches: [main]
+    pull_request:
+      branches: [main]
+
+  jobs:
+    build:
+      runs_on: ubuntu-latest
+
+      steps:
+        - uses: actions/checkout@v4
+
+        - name: Setup Node.js
+          uses: actions/setup-node@v4
+          with:
+            node_version: "20"
+
+        - name: Install dependencies
+          run: npm ci
+
+        - name: Run tests
+          run: npm test
+
+        - name: Build
+          run: npm run build
+
+# Multiline strings
+notes: |
+  This is a multiline string that preserves
+  line breaks and formatting.
+
+  It's useful for documentation or
+  longer text content.
+
+folded_notes: >
+  This is a folded string where newlines
+  are converted to spaces. It's useful
+  for long text that should flow as
+  a single paragraph.
+
+# Boolean and null values
+enabled: true
+deprecated: false
+experimental: null
+
+# Numbers
+statistics:
+  downloads: 0
+  rating: 4.5
+  reviews_count: 42
+  version_major: 1
+  version_minor: 0
+  version_patch: 0

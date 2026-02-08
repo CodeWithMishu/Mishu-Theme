@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "mishu-theme-config",
+  "version": "1.0.0",
+  "description": "Sample JSON configuration file for theme preview",
+  
+  "theme": {
+    "variant": "dark",
+    "contrast": "low",
+    "semanticHighlighting": true
+  },
+  
+  "colors": {
+    "primary": "#7eb8da",
+    "secondary": "#8cc4b8",
+    "accent": "#c4a8b8",
+    "background": {
+      "editor": "#1a1d23",
+      "sidebar": "#16181e",
+      "panel": "#12141a"
+    },
+    "foreground": {
+      "primary": "#c5c8d4",
+      "secondary": "#8b8f9c",
+      "muted": "#6b7280"
+    }
+  },
+  
+  "syntax": {
+    "functions": { "color": "#7eb8da", "fontStyle": "normal" },
+    "classes": { "color": "#8cc4b8", "fontStyle": "normal" },
+    "keywords": { "color": "#c4a8b8", "fontStyle": "normal" },
+    "strings": { "color": "#a8c4a0", "fontStyle": "normal" },
+    "numbers": { "color": "#d4a88c", "fontStyle": "normal" },
+    "comments": { "color": "#6b7280", "fontStyle": "italic" }
+  },
+  
+  "features": [
+    "Eye comfort optimized",
+    "Semantic highlighting",
+    "Low contrast design",
+    "Consistent UI theming"
+  ],
+  
+  "languages": [
+    "javascript",
+    "typescript",
+    "python",
+    "html",
+    "css",
+    "json",
+    "yaml",
+    "markdown",
+    "rust",
+    "go"
+  ],
+  
+  "metadata": {
+    "author": "CodeWithMishu",
+    "license": "MIT",
+    "repository": "https://github.com/codewithmishu/mishu-theme",
+    "createdAt": "2026-02-08T00:00:00.000Z",
+    "tags": ["theme", "dark", "low-contrast", "eye-comfort"]
+  },
+  
+  "settings": {
+    "enableBracketColorization": true,
+    "enableSemanticTokens": true,
+    "smoothCursor": true,
+    "minimapEnabled": true,
+    "minimapRenderCharacters": false
+  },
+  
+  "statistics": {
+    "downloads": 0,
+    "rating": null,
+    "reviews": []
+  },
+  
+  "enabled": true,
+  "deprecated": false,
+  "experimental": false
+}

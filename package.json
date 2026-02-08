@@ -1,0 +1,263 @@
+{
+  "name": "mishu-theme",
+  "displayName": "Mishu Theme",
+  "description": "A calm, low-contrast dark theme designed for eye comfort during long coding sessions. Features semantic syntax highlighting and harmonious colors.",
+  "version": "1.0.0",
+  "publisher": "codewithmishu",
+  "author": {
+    "name": "CodeWithMishu"
+  },
+  "license": "MIT",
+  "main": "./out/extension.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codewithmishu/mishu-theme"
+  },
+  "bugs": {
+    "url": "https://github.com/codewithmishu/mishu-theme/issues"
+  },
+  "homepage": "https://github.com/codewithmishu/mishu-theme#readme",
+  "keywords": [
+    "theme",
+    "dark theme",
+    "low contrast",
+    "eye comfort",
+    "semantic highlighting",
+    "calm",
+    "minimal",
+    "developer experience",
+    "material",
+    "icons"
+  ],
+  "categories": [
+    "Themes"
+  ],
+  "galleryBanner": {
+    "color": "#1a1d23",
+    "theme": "dark"
+  },
+  "icon": "images/icon.jpg",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "mishu-theme.switchTheme",
+        "title": "Mishu: Switch Theme",
+        "category": "Mishu Theme"
+      },
+      {
+        "command": "mishu-theme.setColorTheme",
+        "title": "Set Color Theme",
+        "category": "Mishu Theme",
+        "icon": "$(color-mode)"
+      },
+      {
+        "command": "mishu-theme.setFileIconTheme",
+        "title": "Set File Icon Theme",
+        "category": "Mishu Theme",
+        "icon": "$(file-media)"
+      },
+      {
+        "command": "mishu-theme.changeAccent",
+        "title": "Mishu: Change Accent Color",
+        "category": "Mishu Theme"
+      },
+      {
+        "command": "mishu-theme.toggleCompact",
+        "title": "Mishu: Toggle Compact Mode",
+        "category": "Mishu Theme"
+      },
+      {
+        "command": "mishu-theme.toggleBoldKeywords",
+        "title": "Mishu: Toggle Bold Keywords",
+        "category": "Mishu Theme"
+      },
+      {
+        "command": "mishu-theme.toggleItalicComments",
+        "title": "Mishu: Toggle Italic Comments",
+        "category": "Mishu Theme"
+      },
+      {
+        "command": "mishu-theme.toggleHighContrast",
+        "title": "Mishu: Toggle High Contrast",
+        "category": "Mishu Theme"
+      },
+      {
+        "command": "mishu-theme.enableFileIcons",
+        "title": "Mishu: Enable File Icons",
+        "category": "Mishu Theme"
+      },
+      {
+        "command": "mishu-theme.resetSettings",
+        "title": "Mishu: Reset to Defaults",
+        "category": "Mishu Theme"
+      },
+      {
+        "command": "mishu-theme.openSettings",
+        "title": "Mishu: Open Settings",
+        "category": "Mishu Theme"
+      },
+      {
+        "command": "mishu-theme.showInfo",
+        "title": "Mishu: Show Theme Info",
+        "category": "Mishu Theme"
+      }
+    ],
+    "menus": {
+      "extension/context": [
+        {
+          "command": "mishu-theme.setColorTheme",
+          "group": "1_mishu@1",
+          "when": "extension == codewithmishu.mishu-theme && extensionStatus == installed"
+        },
+        {
+          "command": "mishu-theme.setFileIconTheme",
+          "group": "1_mishu@2",
+          "when": "extension == codewithmishu.mishu-theme && extensionStatus == installed"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Mishu Theme",
+      "properties": {
+        "mishuTheme.accentColor": {
+          "type": "string",
+          "default": "teal",
+          "enum": ["teal", "cyan", "blue", "purple", "pink", "red", "orange", "yellow", "green", "lime"],
+          "enumDescriptions": [
+            "Teal (#80CBC4) - Default Material accent",
+            "Cyan (#89DDFF) - Bright cyan accent",
+            "Blue (#82AAFF) - Calm blue accent",
+            "Purple (#C792EA) - Soft purple accent",
+            "Pink (#FF9CAC) - Warm pink accent",
+            "Red (#FF5370) - Bold red accent",
+            "Orange (#F78C6C) - Warm orange accent",
+            "Yellow (#FFCB6B) - Bright yellow accent",
+            "Green (#C3E88D) - Fresh green accent",
+            "Lime (#A5D6A7) - Soft lime accent"
+          ],
+          "description": "Choose the accent color for UI highlights, buttons, and selections"
+        },
+        "mishuTheme.boldKeywords": {
+          "type": "boolean",
+          "default": true,
+          "description": "Use bold font weight for keywords (if, else, return, etc.)"
+        },
+        "mishuTheme.italicComments": {
+          "type": "boolean",
+          "default": true,
+          "description": "Use italic font style for comments"
+        },
+        "mishuTheme.compactMode": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable compact UI mode with reduced spacing"
+        },
+        "mishuTheme.highContrast": {
+          "type": "boolean",
+          "default": false,
+          "description": "Increase contrast for better visibility (accessibility)"
+        },
+        "mishuTheme.cursorStyle": {
+          "type": "string",
+          "default": "line",
+          "enum": ["line", "block", "underline"],
+          "description": "Cursor style in the editor"
+        },
+        "mishuTheme.statusBarStyle": {
+          "type": "string",
+          "default": "default",
+          "enum": ["default", "minimal", "colorful"],
+          "enumDescriptions": [
+            "Default status bar appearance",
+            "Minimal with reduced background",
+            "Colorful with accent highlights"
+          ],
+          "description": "Status bar appearance style"
+        },
+        "mishuTheme.sidebarContrast": {
+          "type": "boolean",
+          "default": true,
+          "description": "Use slightly different background for sidebar"
+        },
+        "mishuTheme.bracketPairGuides": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show colorized bracket pair guides"
+        }
+      }
+    },
+    "themes": [
+      {
+        "label": "Mishu Teal",
+        "uiTheme": "vs-dark",
+        "path": "./themes/mishu-teal.json"
+      },
+      {
+        "label": "Mishu Ocean",
+        "uiTheme": "vs-dark",
+        "path": "./themes/mishu-ocean.json"
+      },
+      {
+        "label": "Mishu Carbon",
+        "uiTheme": "vs-dark",
+        "path": "./themes/mishu-carbon.json"
+      },
+      {
+        "label": "Mishu Palenight",
+        "uiTheme": "vs-dark",
+        "path": "./themes/mishu-palenight.json"
+      },
+      {
+        "label": "Mishu Graphene",
+        "uiTheme": "vs-dark",
+        "path": "./themes/mishu-graphene.json"
+      },
+      {
+        "label": "Mishu Deepforest",
+        "uiTheme": "vs-dark",
+        "path": "./themes/mishu-deepforest.json"
+      },
+      {
+        "label": "Mishu Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/mishu-dark.json"
+      },
+      {
+        "label": "Mishu Dark Soft",
+        "uiTheme": "vs-dark",
+        "path": "./themes/mishu-dark-soft.json"
+      },
+      {
+        "label": "Mishu Midnight",
+        "uiTheme": "vs-dark",
+        "path": "./themes/mishu-midnight.json"
+      }
+    ],
+    "iconThemes": [
+      {
+        "id": "mishu-icons-teal",
+        "label": "Mishu Icons Teal",
+        "path": "./icons/file-icons/mishu-icons.json"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.74.0",
+    "typescript": "^5.0.0"
+  }
+}
