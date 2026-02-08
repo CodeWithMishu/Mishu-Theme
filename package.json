@@ -2,7 +2,7 @@
   "name": "mishu-theme",
   "displayName": "Mishu Theme",
   "description": "A calm, low-contrast dark theme designed for eye comfort during long coding sessions. Features semantic syntax highlighting and harmonious colors.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "codewithmishu",
   "author": {
     "name": "CodeWithMishu"

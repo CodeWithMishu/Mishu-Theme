@@ -58,4 +58,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 | Version | Date       | Highlights                           |
 |---------|------------|--------------------------------------|
+| 1.0.1   | 2026-02-08 | Added icon mappings, test mappings, README updates |
 | 1.0.0   | 2026-02-08 | Initial release with 3 dark variants |
